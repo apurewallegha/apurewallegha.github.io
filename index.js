@@ -16,3 +16,22 @@ var foodObj = {
     caesar salad:  {
         ingredients: "romaine lettuce, anchovy sauce, croutons",
         nutrition: "360 carbohydrates"
+        
+       var search = function (searchStr) {findObj = null;
+   for (var key in obj) {
+   if (obj.hasOwnProperty(key)) {
+       for (var k in obj[key]) {
+           if (obj[key].hasOwnProperty(k)) {
+               if (searchStr === obj[key][k]) {
+                   findObj = obj[key];
+                   break;
+               }
+           }
+       }
+       if (findObj) {
+           break;
+       }
+   }
+}
+return findObj;
+}
